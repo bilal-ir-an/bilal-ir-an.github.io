@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name</title>
+  
+  <!-- Latin Modern / Computer Modern Font for LaTeX aesthetic -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/latin-modern-web@1.0.0/style.css">
+  
+  <style>
+    body {
+      font-family: 'Latin Modern Roman', 'Computer Modern', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #222;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* Top Navigation */
+    nav {
+      text-align: right;
+      margin-bottom: 40px;
+    }
+    nav a {
+      margin-left: 20px;
+      color: #0044cc;
+      text-decoration: none;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    /* Page Layout */
+    .content-wrapper {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    /* Left Sidebar */
+    .sidebar {
+      width: 200px;
+      flex-shrink: 0;
+      text-align: center;
+    }
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .sidebar h2 {
+      font-size: 1.5em;
+      margin: 10px 0;
+      font-weight: normal;
+    }
+    .sidebar-links {
+      list-style: none;
+      padding: 0;
+      font-size: 0.95em;
+    }
+    .sidebar-links li { margin: 8px 0; }
+    .sidebar-links a { color: #0044cc; text-decoration: none; }
+    .sidebar-links a:hover { text-decoration: underline; }
+
+    /* Main Content */
+    .main-content {
+      flex-grow: 1;
+    }
+
+    @media (max-width: 650px) {
+      .content-wrapper { flex-direction: column; align-items: center; }
+      .sidebar { width: 100%; }
+      nav { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#research">Research</a>
+    <a href="#papers">Papers</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#cv">CV</a>
+  </nav>
+
+  <div class="content-wrapper">
+    <!-- Left Profile Column -->
+    <aside class="sidebar">
+      <img src="avatar.jpg" alt="Your Name" class="profile-img">
+      <h2>Your Name</h2>
+      <ul class="sidebar-links">
+        <li><a href="#">ORCID</a></li>
+        <li><a href="#">Google Scholar</a></li>
+        <li><a href="mailto:you@university.edu">you@university.edu</a></li>
+        <li><a href="cv.pdf">Download CV</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <p>I am a freshman at University of Alberta pursuing a Bachlor of Science (Major and Hons) in Mathematical Physics. I am aspiring to be a theoretical physicist one day. Outside of academics
+      you will find me on the basketball court, food court or simracing.</p>
+    </main>
+  </div>
+
+</body>
+</html>
