@@ -1,2 +1,2 @@
 # bilal-ir-an.github.io
-This is superposition of daybook/periodical/advice site.
+Einstein turns around and catches Newton. But Newton replies that he is actually Pascal. Iykyk.
