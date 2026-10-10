@@ -90,9 +90,17 @@
       gap: 20px;
     }
     .edu-row .left { font-weight: normal; }
+    .edu-row .left.bold { font-weight: bold; }
     .edu-row.sub .left { font-weight: normal; }
     .edu-row .right { text-align: right; white-space: nowrap; }
-    .edu-row.award { margin-bottom: 6px; }
+
+    /* Awards: black bar between each award */
+    .edu-row.award {
+      padding: 6px 0;
+    }
+    .edu-row.award + .edu-row.award {
+      border-top: 1px solid #000;
+    }
 
     @media (max-width: 650px) {
       .content-wrapper { flex-direction: column; align-items: center; }
@@ -134,7 +142,7 @@
 
       <h3>Education</h3>
       <div class="edu-row">
-        <span class="left">DPS - Modern Indian School</span>
+        <span class="left bold">DPS - Modern Indian School</span>
         <span class="right">Al-Wakrah, Qatar</span>
       </div>
       <div class="edu-row sub">
