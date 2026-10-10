@@ -84,12 +84,17 @@
     }
 
     /* Section Headings */
-    .main-content h3 {
+    .main-content h3,
+    .below-section h3 {
       font-size: 1.3em;
       font-weight: normal;
       border-bottom: 1px solid #222;
       padding-bottom: 4px;
       margin: 30px 0 12px 0;
+    }
+
+    .below-section {
+      margin-top: 10px;
     }
 
     /* Education and Awards Rows */
@@ -143,7 +148,6 @@
     <!-- Left Profile Column -->
     <aside class="sidebar">
       <img src="bilalpic.jpg" class="profile-img">
-      <h2>Bilal Irfan Ansari</h2>
       <ul class="sidebar-links">
         <li><a href="mailto:bilal71828026@gmail.com">Mail</a></li>
         <li><a href="https://github.com/bilal-ir-an">GitHub</a></li>
@@ -152,36 +156,39 @@
       </ul>
     </aside>
 
-    <!-- Main Content Area -->
+    <!-- Main Content Area (bio only) -->
     <main class="main-content">
       <p>I am aspiring to be a theoretical physicist one day. Outside of academics
       you will find me on the basketball court, food court or simracing.</p>
-
-      <h3>Education</h3>
-      <div class="edu-row">
-        <span class="left bold">DPS - Modern Indian School</span>
-        <span class="right">Al-Wakrah, Qatar</span>
-      </div>
-      <div class="edu-row sub">
-        <span class="left">High School Diploma</span>
-        <span class="right">2012 – 2026</span>
-      </div>
-
-      <h3>Awards and Honors</h3>
-      <div class="edu-row award">
-        <span class="left">Tuition Fee Waiver</span>
-        <span class="right">Orta Doğu Teknik Üniversitesi, 2026</span>
-      </div>
-      <div class="edu-row award">
-        <span class="left">Special Award</span>
-        <span class="right">DPS-MIS, 2025</span>
-      </div>
-      <div class="edu-row award">
-        <span class="left">Gold Medal in CBSE Clusters Basketball</span>
-        <span class="right">DPS-MIS, 2025</span>
-      </div>
     </main>
   </div>
+
+  <!-- Below the sidebar, full width -->
+  <section class="below-section">
+    <h3>Education</h3>
+    <div class="edu-row">
+      <span class="left bold">DPS - Modern Indian School</span>
+      <span class="right">Al-Wakrah, Qatar</span>
+    </div>
+    <div class="edu-row sub">
+      <span class="left">High School Diploma</span>
+      <span class="right">2012 – 2026</span>
+    </div>
+
+    <h3>Awards and Honors</h3>
+    <div class="edu-row award">
+      <span class="left">Tuition Fee Waiver</span>
+      <span class="right">Orta Doğu Teknik Üniversitesi, 2026</span>
+    </div>
+    <div class="edu-row award">
+      <span class="left">Special Award</span>
+      <span class="right">DPS-MIS, 2025</span>
+    </div>
+    <div class="edu-row award">
+      <span class="left">Gold Medal in CBSE Clusters Basketball</span>
+      <span class="right">DPS-MIS, 2025</span>
+    </div>
+  </section>
 
 </body>
 </html>
