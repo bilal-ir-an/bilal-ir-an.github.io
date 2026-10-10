@@ -18,16 +18,28 @@
       margin: 40px auto;
       padding: 0 20px;
     }
+
+    /* Top Navigation */
     nav {
-      text-align: right;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin-bottom: 40px;
     }
-    nav a {
+    nav .nav-links a {
       margin-left: 20px;
       color: #0044cc;
       text-decoration: none;
     }
-    nav a:hover { text-decoration: underline; }
+    nav .nav-links a:hover { text-decoration: underline; }
+
+    /* Name on the left of the nav */
+    nav .nav-name {
+      font-size: 1.3em;
+      color: #222;
+      text-decoration: none;
+    }
+
     a { color: #0044cc; text-decoration: none; }
     a:hover { text-decoration: underline; }
     h1 {
@@ -39,13 +51,15 @@
     li { margin: 8px 0; }
 
     @media (max-width: 650px) {
-      nav { text-align: center; }
+      nav { flex-direction: column; gap: 10px; text-align: center; }
+      nav .nav-links a { margin: 0 10px; }
     }
   </style>
 </head>
 <body>
 
- <nav>
+  <!-- Header Navigation -->
+  <nav>
     <a class="nav-name" href="index.html">Bilal Irfan Ansari</a>
     <div class="nav-links">
       <a href="index.html">Home</a>
