@@ -44,47 +44,35 @@
       text-decoration: none;
     }
 
-    /* Page Layout */
-    .content-wrapper {
-      display: flex;
-      gap: 40px;
-      align-items: flex-start;
-    }
-
-    /* Left Sidebar */
-    .sidebar {
-      width: 200px;
-      flex-shrink: 0;
+    /* Centered intro: picture, links, bio */
+    .intro {
       text-align: center;
+      max-width: 650px;
+      margin: 0 auto;
     }
     .profile-img {
-      width: 160px;
-      height: 160px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 15px;
+      display: block;
+      margin: 0 auto 15px auto;
     }
-    .sidebar h2 {
-      font-size: 1.5em;
-      margin: 10px 0;
-      font-weight: normal;
-    }
-    .sidebar-links {
+    .intro-links {
       list-style: none;
       padding: 0;
+      margin: 0 0 20px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px 22px;
       font-size: 0.95em;
     }
-    .sidebar-links li { margin: 8px 0; }
-    .sidebar-links a { color: #0044cc; text-decoration: none; }
-    .sidebar-links a:hover { text-decoration: underline; }
-
-    /* Main Content */
-    .main-content {
-      flex-grow: 1;
-    }
+    .intro-links a { color: #0044cc; text-decoration: none; }
+    .intro-links a:hover { text-decoration: underline; }
+    .intro p { margin: 0; }
 
     /* Section Headings */
-    .main-content h3,
     .below-section h3 {
       font-size: 1.3em;
       font-weight: normal;
@@ -121,8 +109,6 @@
     }
 
     @media (max-width: 650px) {
-      .content-wrapper { flex-direction: column; align-items: center; }
-      .sidebar { width: 100%; }
       nav { flex-direction: column; gap: 10px; text-align: center; }
       nav .nav-links a { margin: 0 10px; }
 
@@ -145,26 +131,20 @@
     </div>
   </nav>
 
-  <div class="content-wrapper">
-    <!-- Left Profile Column -->
-    <aside class="sidebar">
-      <img src="bilalpic.jpg" class="profile-img">
-      <ul class="sidebar-links">
-        <li><a href="mailto:bilal71828026@gmail.com">Mail</a></li>
-        <li><a href="https://github.com/bilal-ir-an">GitHub</a></li>
-        <li><a href="https://www.youtube.com/@bilal-ir-an">YouTube</a></li>
-        <li><a href="https://www.linkedin.com/in/bilal-irfan-ansari-a4935a432">LinkedIn</a></li>
-      </ul>
-    </aside>
+  <!-- Centered intro: picture, then links, then biography -->
+  <section class="intro">
+    <img src="bilalpic.jpg" class="profile-img" alt="Bilal Irfan Ansari">
+    <ul class="intro-links">
+      <li><a href="mailto:bilal71828026@gmail.com">Mail</a></li>
+      <li><a href="https://github.com/bilal-ir-an">GitHub</a></li>
+      <li><a href="https://www.youtube.com/@bilal-ir-an">YouTube</a></li>
+      <li><a href="https://www.linkedin.com/in/bilal-irfan-ansari-a4935a432">LinkedIn</a></li>
+    </ul>
+    <p>I am aspiring to be a theoretical physicist one day. Outside of academics
+    you will find me on the basketball court, food court or simracing.</p>
+  </section>
 
-    <!-- Main Content Area (bio only) -->
-    <main class="main-content">
-      <p>I am aspiring to be a theoretical physicist one day. Outside of academics
-      you will find me on the basketball court, food court or simracing.</p>
-    </main>
-  </div>
-
-  <!-- Below the sidebar, full width -->
+  <!-- Below the intro, full width -->
   <section class="below-section">
     <h3>Education</h3>
     <div class="edu-row">
