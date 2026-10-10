@@ -25,15 +25,24 @@
 
     /* Top Navigation */
     nav {
-      text-align: right;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin-bottom: 40px;
     }
-    nav a {
+    nav .nav-links a {
       margin-left: 20px;
       color: #0044cc;
       text-decoration: none;
     }
-    nav a:hover { text-decoration: underline; }
+    nav .nav-links a:hover { text-decoration: underline; }
+
+    /* Name on the left of the nav */
+    nav .nav-name {
+      font-size: 1.3em;
+      color: #222;
+      text-decoration: none;
+    }
 
     /* Page Layout */
     .content-wrapper {
@@ -101,11 +110,16 @@
     .edu-row.award + .edu-row.award {
       border-top: 1px solid #000;
     }
+    /* Black bar under the last award */
+    .edu-row.award:last-child {
+      border-bottom: 1px solid #000;
+    }
 
     @media (max-width: 650px) {
       .content-wrapper { flex-direction: column; align-items: center; }
       .sidebar { width: 100%; }
-      nav { text-align: center; }
+      nav { flex-direction: column; gap: 10px; text-align: center; }
+      nav .nav-links a { margin: 0 10px; }
 
       /* Stack rows on small screens */
       .edu-row { flex-direction: column; gap: 0; }
@@ -117,9 +131,12 @@
 
   <!-- Header Navigation -->
   <nav>
-    <a href="index.html">Home</a>
-    <a href="advice.html">Advice</a>
-    <a href="CV.html">CV/Resume/Transcripts</a>
+    <a class="nav-name" href="index.html">Bilal Irfan Ansari</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="advice.html">Advice</a>
+      <a href="CV.html">CV/Resume/Transcripts</a>
+    </div>
   </nav>
 
   <div class="content-wrapper">
