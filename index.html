@@ -73,6 +73,13 @@
     }
     .edu-row .right { text-align: right; white-space: nowrap; }
 
+    /* Degree / diploma lines under each school */
+    .edu-row.sub {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 18px;
+    }
+
     @media (max-width: 650px) {
       nav { flex-direction: column; gap: 10px; text-align: center; }
       nav .nav-links a { margin: 0 10px; }
@@ -108,18 +115,18 @@
   <section class="below-section">
     <h3>Education</h3>
     <div class="edu-row">
-      <span class="left bold">University of Alberta</span>
+      <span class="left">University of Alberta</span>
       <span class="right">Edmonton, Canada</span>
     </div>
-    <div class="edu-row">
+    <div class="edu-row sub">
       <span class="left">B.Sc. Honors in Mathematical Physics</span>
       <span class="right">2027 – 2031</span>
     </div>
     <div class="edu-row">
-      <span class="left bold">DPS - Modern Indian School</span>
+      <span class="left">DPS - Modern Indian School</span>
       <span class="right">Al-Wakrah, Qatar</span>
     </div>
-    <div class="edu-row">
+    <div class="edu-row sub">
       <span class="left">High School Diploma (Science Stream - PCMB)</span>
       <span class="right">2012 – 2026</span>
     </div>
