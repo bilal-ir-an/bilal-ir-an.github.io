@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/latin-modern-web@1.0.0/style.css">
   <!-- Font Awesome CDN for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
+
+  <style>
     body {
       font-family: 'Latin Modern Roman', 'Computer Modern', Georgia, serif;
       font-size: 17px;
@@ -18,27 +19,6 @@
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
-    }
-
-    /* Top Navigation */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 40px;
-    }
-    nav .nav-links a {
-      margin-left: 20px;
-      color: #000000; /* Updated to black to override global anchor specificity */
-      text-decoration: none;
-    }
-    nav .nav-links a:hover { text-decoration: underline; color: #0044cc; }
-
-    /* Name on the left of the nav */
-    nav .nav-name {
-      font-size: 1.3em;
-      color: #222;
-      text-decoration: none;
     }
 
     a, a:visited { 
@@ -50,17 +30,85 @@
       color: #0044cc; 
       text-decoration: underline; 
     }
-    h1 {
-      font-size: 1.6em;
-      font-weight: normal;
-      margin-bottom: 20px;
+
+    /* Top navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px 30px;
+      margin-bottom: 40px;
     }
-    ul { padding-left: 24px; }
-    li { margin: 8px 0; }
+    nav .nav-links a { margin-left: 20px; }
+    nav a.nav-name, nav a.nav-name:visited {
+      font-size: 1.3em;
+      color: #222;
+      transition: color 0.2s ease-in-out;
+    }
+    nav a.nav-name:hover {
+      color: #0044cc;
+    }
+
+    /* Centered intro */
+    .intro { text-align: center; margin-bottom: 40px; }
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+    .intro-links {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .intro-links li { margin: 0; }
+    
+    /* Icon styling adjustments */
+    .intro-links a {
+      font-size: 1.25em; /* Makes the symbol/logo icons well-proportioned */
+    }
+    .intro-links a:hover {
+      text-decoration: none; /* Removes underline on icon hover */
+    }
+
+    .intro p { max-width: 640px; margin: 0 auto; }
+
+    /* Sections */
+    .below-section h3 {
+      font-size: 1.35em;
+      font-weight: normal;
+      border-bottom: 1px solid #222;
+      padding-bottom: 6px;
+      margin: 40px 0 16px;
+    }
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin: 0;
+    }
+    .edu-row .right { text-align: right; white-space: nowrap; }
+
+    /* Degree / diploma lines under each school */
+    .edu-row.sub {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 18px;
+    }
 
     @media (max-width: 650px) {
       nav { flex-direction: column; gap: 10px; text-align: center; }
       nav .nav-links a { margin: 0 10px; }
+      .edu-row { flex-direction: column; gap: 0; }
+      .edu-row .right { text-align: left; white-space: normal; }
     }
   </style>
 </head>
