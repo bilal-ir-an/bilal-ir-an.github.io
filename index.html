@@ -7,6 +7,8 @@
 
   <link rel="icon" type="image/jpeg" href="bilallogo.jpeg">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/latin-modern-web@1.0.0/style.css">
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     body {
@@ -19,7 +21,7 @@
       padding: 0 20px;
     }
 
-   a, a:visited { 
+    a, a:visited { 
       color: #000000; 
       text-decoration: none; 
       transition: color 0.2s ease-in-out;
@@ -42,6 +44,10 @@
     nav a.nav-name, nav a.nav-name:visited {
       font-size: 1.3em;
       color: #222;
+      transition: color 0.2s ease-in-out;
+    }
+    nav a.nav-name:hover {
+      color: #0044cc;
     }
 
     /* Centered intro */
@@ -64,6 +70,15 @@
       gap: 24px;
     }
     .intro-links li { margin: 0; }
+    
+    /* Icon styling adjustments */
+    .intro-links a {
+      font-size: 1.25em; /* Makes the symbol/logo icons well-proportioned */
+    }
+    .intro-links a:hover {
+      text-decoration: none; /* Removes underline on icon hover */
+    }
+
     .intro p { max-width: 640px; margin: 0 auto; }
 
     /* Sections */
@@ -113,10 +128,10 @@
   <section class="intro">
     <img src="bilalpic.jpg" class="profile-img" alt="Bilal Irfan Ansari">
     <ul class="intro-links">
-      <li><a href="mailto:bilal71828026@gmail.com">Mail</a></li>
-      <li><a href="https://github.com/bilal-ir-an">GitHub</a></li>
-      <li><a href="https://www.youtube.com/@bilal-ir-an">YouTube</a></li>
-      <li><a href="https://www.linkedin.com/in/bilal-irfan-ansari-a4935a432">LinkedIn</a></li>
+      <li><a href="mailto:bilal71828026@gmail.com" title="Mail"><i class="fa-solid fa-envelope"></i></a></li>
+      <li><a href="https://github.com/bilal-ir-an" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a></li>
+      <li><a href="https://www.youtube.com/@bilal-ir-an" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/bilal-irfan-ansari-a4935a432" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
     </ul>
     <p>I am aspiring to be a theoretical physicist one day. Outside of academics
     you will find me on the basketball court, food court or simracing.</p>
