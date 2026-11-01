@@ -60,12 +60,14 @@
     /* Video grid */
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
       margin-top: 20px;
     }
     .video-grid video {
       width: 100%;
+      max-height: 320px;
+      object-fit: contain;
       border-radius: 6px;
       background: #000;
     }
@@ -73,7 +75,7 @@
     @media (max-width: 650px) {
       nav { flex-direction: column; gap: 10px; text-align: center; }
       nav .nav-links a { margin: 0 10px; }
-      .video-grid { grid-template-columns: 1fr; }
+      .video-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
