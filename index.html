@@ -101,7 +101,7 @@
     .edu-row.sub {
       font-style: italic;
       color: #555;
-      margin-bottom: 0px;
+      margin-bottom: 4px;
     }
 
     /* CGPA sub-sub line styling */
@@ -109,6 +109,14 @@
       font-style: italic;
       color: #555;
       margin-bottom: 18px;
+    }
+
+    /* Spacing between different institutions/schools */
+    .edu-institution {
+      margin-top: 18px;
+    }
+    .edu-institution:first-of-type {
+      margin-top: 0;
     }
 
     @media (max-width: 650px) {
@@ -148,24 +156,30 @@
 
   <section class="below-section">
     <h3>Education</h3>
-    <div class="edu-row">
-      <span class="left">University of Alberta</span>
-      <span class="right">Edmonton, Canada</span>
+    
+    <div class="edu-institution">
+      <div class="edu-row">
+        <span class="left">University of Alberta</span>
+        <span class="right">Edmonton, Canada</span>
+      </div>
+      <div class="edu-row sub">
+        <span class="left">B.Sc. Honors in Mathematical Physics</span>
+        <span class="right">2027 – 2031</span>
+      </div>
     </div>
-    <div class="edu-row sub">
-      <span class="left">B.Sc. Honors in Mathematical Physics</span>
-      <span class="right">2027 – 2031</span>
-    </div>
-    <div class="edu-row">
-      <span class="left">DPS - Modern Indian School</span>
-      <span class="right">Al-Wakrah, Qatar</span>
-    </div>
-    <div class="edu-row sub">
-      <span class="left">High School Diploma (Science Stream)</span>
-      <span class="right">2012 – 2026</span>
-    </div>
-    <div class="edu-row sub-cgpa">
-      <span class="left">CGPA: 9.3/10</span>
+
+    <div class="edu-institution">
+      <div class="edu-row">
+        <span class="left">DPS - Modern Indian School</span>
+        <span class="right">Al-Wakrah, Qatar</span>
+      </div>
+      <div class="edu-row sub">
+        <span class="left">High School Diploma (Science Stream)</span>
+        <span class="right">2012 – 2026</span>
+      </div>
+      <div class="edu-row sub-cgpa">
+        <span class="left">CGPA: 9.3/10</span>
+      </div>
     </div>
 
     <h3>Standardized Tests</h3>
