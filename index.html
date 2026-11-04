@@ -11,24 +11,35 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
+    :root {
+      --bg: #121212;
+      --text: #e6e6e6;
+      --link: #ffffff;
+      --link-hover: #6ea8ff;
+      --muted: #a8a8a8;
+      --rule: #e6e6e6;
+      color-scheme: dark;
+    }
+
     body {
       font-family: 'Latin Modern Roman', 'Computer Modern', Georgia, serif;
       font-size: 17px;
       line-height: 1.6;
-      color: #222;
+      color: var(--text);
+      background: var(--bg);
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    a, a:visited { 
-      color: #000000; 
-      text-decoration: none; 
+    a, a:visited {
+      color: var(--link);
+      text-decoration: none;
       transition: color 0.2s ease-in-out;
     }
-    a:hover { 
-      color: #0044cc; 
-      text-decoration: underline; 
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
     }
 
     /* Top navigation */
@@ -43,11 +54,11 @@
     nav .nav-links a { margin-left: 20px; }
     nav a.nav-name, nav a.nav-name:visited {
       font-size: 1.3em;
-      color: #222;
+      color: var(--text);
       transition: color 0.2s ease-in-out;
     }
     nav a.nav-name:hover {
-      color: #0044cc;
+      color: var(--link-hover);
     }
 
     /* Centered intro */
@@ -70,14 +81,9 @@
       gap: 24px;
     }
     .intro-links li { margin: 0; }
-    
-    /* Icon styling adjustments */
-    .intro-links a {
-      font-size: 1.25em; /* Makes the symbol/logo icons well-proportioned */
-    }
-    .intro-links a:hover {
-      text-decoration: none; /* Removes underline on icon hover */
-    }
+
+    .intro-links a { font-size: 1.25em; }
+    .intro-links a:hover { text-decoration: none; }
 
     .intro p { max-width: 640px; margin: 0 auto; }
 
@@ -85,7 +91,7 @@
     .below-section h3 {
       font-size: 1.35em;
       font-weight: normal;
-      border-bottom: 1px solid #222;
+      border-bottom: 1px solid var(--rule);
       padding-bottom: 6px;
       margin: 40px 0 16px;
     }
@@ -100,23 +106,33 @@
     /* Degree / diploma lines under each school */
     .edu-row.sub {
       font-style: italic;
-      color: #555;
+      color: var(--muted);
       margin-bottom: 4px;
     }
 
-    /* CGPA sub-sub line styling */
     .edu-row.sub-cgpa {
       font-style: italic;
-      color: #555;
+      color: var(--muted);
       margin-bottom: 18px;
     }
 
-    /* Spacing between different institutions/schools */
+    /* Institution block: logo on the left, text on the right */
     .edu-institution {
+      display: flex;
+      align-items: center;
+      gap: 18px;
       margin-top: 18px;
     }
-    .edu-institution:first-of-type {
-      margin-top: 0;
+    .edu-institution:first-of-type { margin-top: 0; }
+    .edu-text { flex: 1; min-width: 0; }
+
+    /* Black-and-white logos: flatten to a silhouette, then make it white for dark mode */
+    .school-logo {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      flex-shrink: 0;
+      filter: grayscale(1) brightness(0) invert(1);
     }
 
     @media (max-width: 650px) {
@@ -156,26 +172,32 @@
 
   <section class="below-section">
     <h3>Education</h3>
-    
+
     <div class="edu-institution">
-      <div class="edu-row">
-        <span class="left">University of Alberta</span>
-        <span class="right">Edmonton, Canada</span>
-      </div>
-      <div class="edu-row sub">
-        <span class="left">B.Sc. Honors in Mathematical Physics</span>
-        <span class="right">2027 – 2031</span>
+      <img class="school-logo" src="ualberta-logo.png" alt="University of Alberta logo">
+      <div class="edu-text">
+        <div class="edu-row">
+          <span class="left">University of Alberta</span>
+          <span class="right">Edmonton, Canada</span>
+        </div>
+        <div class="edu-row sub">
+          <span class="left">B.Sc. Honors in Mathematical Physics</span>
+          <span class="right">2027 – 2031</span>
+        </div>
       </div>
     </div>
 
     <div class="edu-institution">
-      <div class="edu-row">
-        <span class="left">DPS - Modern Indian School</span>
-        <span class="right">Al-Wakrah, Qatar</span>
-      </div>
-      <div class="edu-row sub">
-        <span class="left">High School Diploma (Science Stream)</span>
-        <span class="right">2012 – 2026</span>
+      <img class="school-logo" src="dps-logo.png" alt="DPS Modern Indian School logo">
+      <div class="edu-text">
+        <div class="edu-row">
+          <span class="left">DPS - Modern Indian School</span>
+          <span class="right">Al-Wakrah, Qatar</span>
+        </div>
+        <div class="edu-row sub">
+          <span class="left">High School Diploma (Science Stream)</span>
+          <span class="right">2012 – 2026</span>
+        </div>
       </div>
     </div>
 
@@ -218,7 +240,7 @@
     </div>
 
     <h3>Current Tasks</h3>
-    <p>Trying to finish Basic Mathematics by Serge Lang, Kiselev's Geometry and the Gelfand Correspondance Program books before the end of November. Also trying to learn touch typing for the purpose of Python and TeX documents. Also trying to learn the Porsche 911 GT3 especially the it's driving characteristics in Assetto Corsa Competizione.</p>
+    <p>Trying to finish Book of Proof by Hammack, Basic Mathematics by Serge Lang, Kiselev's Geometry and the Gelfand Correspondance Program books before the end of December. Learning touch typing for the purpose of Python and TeX documents. Also trying to tame the Porsche in Assetto Corsa Competizione.</p>
   </section>
 
 </body>
