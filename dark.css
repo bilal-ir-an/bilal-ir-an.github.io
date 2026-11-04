@@ -1,0 +1,33 @@
+:root {
+  --bg: #121212;
+  --text: #e6e6e6;
+  --link: #ffffff;
+  --link-hover: #6ea8ff;
+  --muted: #a8a8a8;
+  --rule: #e6e6e6;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+a, a:visited,
+nav .nav-links a {
+  color: var(--link);
+}
+
+a:hover,
+nav .nav-links a:hover,
+nav a.nav-name:hover {
+  color: var(--link-hover);
+}
+
+nav a.nav-name, nav a.nav-name:visited,
+nav .nav-name {
+  color: var(--text);
+}
+
+.below-section h3 { border-bottom-color: var(--rule); }
+.edu-row.sub, .edu-row.sub-cgpa { color: var(--muted); }
