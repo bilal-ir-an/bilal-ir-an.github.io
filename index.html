@@ -95,6 +95,7 @@
       padding-bottom: 6px;
       margin: 40px 0 16px;
     }
+    
     .edu-row {
       display: flex;
       justify-content: space-between;
@@ -103,30 +104,27 @@
     }
     .edu-row .right { text-align: right; white-space: nowrap; }
 
-    /* Degree / diploma lines under each school */
+    /* Universal styling for all sub-lines (degrees, diplomas, CGPAs) */
     .edu-row.sub {
       font-style: italic;
       color: var(--muted);
-      margin-bottom: 4px;
+      margin-top: 2px;
+      margin-bottom: 0;
     }
 
-    .edu-row.sub-cgpa {
-      font-style: italic;
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    /* Institution block: logo on the left, text on the right */
+    /* Institution block spacing */
     .edu-institution {
       display: flex;
       align-items: center;
       gap: 18px;
-      margin-top: 18px;
+      margin-bottom: 24px; /* Handles spacing to the next institution cleanly */
     }
-    .edu-institution:first-of-type { margin-top: 0; }
+    .edu-institution:last-of-type {
+      margin-bottom: 0;
+    }
     .edu-text { flex: 1; min-width: 0; }
 
-    /* Black-and-white logos: flatten to a silhouette, then make it white for dark mode */
+    /* Black-and-white logos */
     .school-logo {
       width: 52px;
       height: 52px;
@@ -174,7 +172,7 @@
     <h3>Education</h3>
 
     <div class="edu-institution">
-         <img class="school-logo" src="ualberta-logo.svg" alt="University of Alberta logo">
+      <img class="school-logo" src="ualberta-logo.svg" alt="University of Alberta logo">
       <div class="edu-text">
         <div class="edu-row">
           <span class="left">University of Alberta</span>
@@ -184,6 +182,7 @@
           <span class="left">B.Sc. with Honors in Mathematical Physics</span>
           <span class="right">2027 – 2031</span>
         </div>
+        <!-- You can now add CGPA here whenever needed with class="edu-row sub" -->
       </div>
     </div>
 
